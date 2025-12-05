@@ -14,9 +14,13 @@
         "DATABASE_URI": "postgres://[user]:[password]@localhost:5432/[database]"
       }
     },
-    "nuxt": {
-      "type": "sse",
-      "url": "https://mcp.nuxt.com/sse"
+    "nuxt-ui-remote": {
+      "type": "http",
+      "url": "https://ui.nuxt.com/mcp"
+    },
+    "nuxt-remote": {
+      "type": "http",
+      "url": "https://nuxt.com/mcp"
     }
   }
 }

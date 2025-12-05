@@ -4,7 +4,7 @@ export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: false },
   modules: [
-    '@nuxt/ui-pro',
+    '@nuxt/ui',
     '@pinia/nuxt',
     '@pinia/colada-nuxt',
     '@vueuse/nuxt',
@@ -19,5 +19,14 @@ export default defineNuxtConfig({
       email: process.env.NUXT_ADMIN_EMAIL || 'admin@example.com',
       password: process.env.NUXT_ADMIN_PASSWORD || undefined,
     },
+  },
+  nitro: {
+    publicAssets: [
+      {
+        baseURL: '/storage',
+        dir: './storage',
+        maxAge: 60 * 60, // 1 hour cache
+      },
+    ],
   },
 })
