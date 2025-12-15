@@ -24,7 +24,7 @@
   },
   "dependencies": {
     "@nuxt/ui": "^4.2.1",
-    "@nuxtjs/seo": "^3.2.2",
+    "@nuxtjs/seo": "^3.3.0",
     "@pinia/colada": "^0.17.9",
     "@pinia/colada-nuxt": "^0.2.4",
     "@pinia/nuxt": "^0.11.3",
@@ -41,18 +41,18 @@
     "sharp": "^0.34.5",
     "ulid": "^3.0.2",
     "vue": "^3.5.25",
-    "vue-router": "^4.6.3",
-    "zod": "^4.1.13"
+    "vue-router": "^4.6.4",
+    "zod": "^4.2.0"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^5.4.1",
     "@faker-js/faker": "^10.1.0",
-    "@iconify-json/lucide": "^1.2.80",
-    "@iconify-json/simple-icons": "^1.2.62",
+    "@iconify-json/lucide": "^1.2.81",
+    "@iconify-json/simple-icons": "^1.2.63",
     "@types/lodash-es": "^4.17.12",
     "changelogen": "^0.6.2",
     "drizzle-kit": "^0.31.8",
-    "eslint": "^9.39.1",
+    "eslint": "^9.39.2",
     "esno": "^4.8.0",
     "tsx": "^4.21.0",
     "typescript": "^5.9.3",

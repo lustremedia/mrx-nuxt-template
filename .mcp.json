@@ -21,6 +21,11 @@
     "nuxt-remote": {
       "type": "http",
       "url": "https://nuxt.com/mcp"
+    },
+    "Better Auth": {
+        "type": "http",
+        "url": "https://mcp.chonkie.ai/better-auth/better-auth-builder/mcp",
+        "enabled": true
     }
   }
 }
