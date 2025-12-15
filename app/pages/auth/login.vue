@@ -48,7 +48,7 @@ async function onSubmit(payload: FormSubmitEvent<Schema>) {
     console.error('Login error:', error)
     toast.add({
       title: 'Login failed',
-      description: 'An unknown error occurred. Please try again later.',
+      description: error?.message || 'An unknown error occurred. Please try again later.',
       color: 'error',
     })
   }

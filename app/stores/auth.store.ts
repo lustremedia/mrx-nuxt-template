@@ -21,32 +21,26 @@ export const useAuthStore = defineStore('auth', () => {
   }
 
   const loginWithEmailAndPassword = async (email: string, password: string) => {
-    try {
-      await authClient.signIn.email({
-        email,
-        password,
-      })
-      await getSession()
+    const response = await authClient.signIn.email({
+      email,
+      password,
+    })
+    if (response.error) {
+      throw response.error
     }
-    catch (error) {
-      console.error('Login failed:', error)
-      throw error
-    }
+    await getSession()
   }
 
   const signUpWithEmailAndPassword = async (name: string, email: string, password: string) => {
-    try {
-      await authClient.signUp.email({
-        name,
-        email,
-        password,
-      })
-      await getSession()
+    const response = await authClient.signUp.email({
+      name,
+      email,
+      password,
+    })
+    if (response.error) {
+      throw response.error
     }
-    catch (error) {
-      console.error('Sign up failed:', error)
-      throw error
-    }
+    await getSession()
   }
 
   const updateName = async (name: string) => {
