@@ -2,7 +2,7 @@ import process from 'node:process'
 
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
-  devtools: { enabled: false },
+  devtools: { enabled: true },
   modules: [
     '@nuxt/ui',
     '@pinia/nuxt',

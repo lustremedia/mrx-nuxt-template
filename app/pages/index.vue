@@ -36,6 +36,7 @@ const yikesHandler: YikesHandler<Schema> = {
     })
   },
 }
+defineOgImageComponent('NuxtSeo')
 </script>
 
 <template>
