@@ -23,7 +23,7 @@
     "release:major": "changelogen --release --major --hideAuthorEmail"
   },
   "dependencies": {
-    "@nuxt/ui": "^4.2.1",
+    "@nuxt/ui": "^4.3.0",
     "@nuxtjs/seo": "^3.3.0",
     "@pinia/colada": "^0.17.9",
     "@pinia/colada-nuxt": "^0.2.4",
@@ -40,9 +40,15 @@
     "postgres": "^3.4.7",
     "sharp": "^0.34.5",
     "ulid": "^3.0.2",
-    "vue": "^3.5.25",
+    "vue": "^3.5.26",
     "vue-router": "^4.6.4",
-    "zod": "^4.2.0"
+    "zod": "^4.2.1"
+  },
+  "pnpm": {
+    "overrides": {
+      "@tiptap/core": "3.14.0",
+      "@tiptap/pm": "3.14.0"
+    }
   },
   "devDependencies": {
     "@antfu/eslint-config": "^5.4.1",
