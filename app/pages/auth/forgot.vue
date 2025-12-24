@@ -35,7 +35,7 @@ async function onSubmit(payload: FormSubmitEvent<Schema>) {
   const { email } = payload.data
   loading.value = true
   try {
-    await authClient.forgetPassword({
+    await authClient.requestPasswordReset({
       email,
       redirectTo: `${url}/auth/reset`,
     })
