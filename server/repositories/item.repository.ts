@@ -268,9 +268,10 @@ export class ItemRepository<T extends BaseItem = BaseItem> {
     // LIMIT STUFF
     const limitQuery = sql`LIMIT ${limit} OFFSET ${offset}`
 
-    const [{ count: total }] = await this.db.execute(sql.join(
+    const countResult = await this.db.execute(sql.join(
       [sql`SELECT COUNT(*) FROM ${sql.identifier(this.tableName)}`, whereClause],
     )) as { count: number }[]
+    const total = countResult[0]?.count ?? 0
 
     // EXECUTE THIS SHIT
     const result = await this.db.execute(sql.join(

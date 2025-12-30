@@ -1,5 +1,7 @@
 import { adminClient } from 'better-auth/client/plugins'
 import { createAuthClient } from 'better-auth/vue'
+import { useRequestHeaders } from 'nuxt/app'
+import { useSiteConfig } from '#site-config/app/composables/useSiteConfig'
 import { avatarPluginClient } from '~~/shared/plugins/better-auth/avatar/client'
 
 export const plugins = [
@@ -8,7 +10,7 @@ export const plugins = [
 ]
 
 export const useAuthClient = () => {
-  const cookieString = useRequestHeader('cookie')
+  const cookieString = useRequestHeaders(['cookie']).cookie
   const { url } = useSiteConfig()
 
   const authClient = createAuthClient({

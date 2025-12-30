@@ -45,7 +45,8 @@ export const auth = betterAuth({
       create: {
         before: async (newUser) => {
           const db = getDatabase()
-          const [{ count: userCount }] = await db.select({ count: count() }).from(user)
+          const result = await db.select({ count: count() }).from(user)
+          const userCount = result[0]?.count ?? 0
           if (userCount === 0) {
             return {
               data: {

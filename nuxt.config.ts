@@ -2,6 +2,10 @@ import process from 'node:process'
 
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
+  site: {
+    url: process.env.NUXT_SITE_URL,
+    name: process.env.NUXT_SITE_NAME,
+  },
   devtools: { enabled: true },
   modules: [
     '@nuxt/ui',
